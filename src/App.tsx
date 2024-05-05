@@ -18,10 +18,8 @@ function App() {
             }
 
             const displayDays = days > 0;
-            const displayHours = hours > 0 || days > 0;
-            const displayMinutes = minutes > 0 || hours > 0 || days > 0;
-            const displaySeconds =
-              seconds > 0 || minutes > 0 || hours > 0 || days > 0;
+            const displayHours = hours > 0;
+            const displayMinutes = minutes > 0;
 
             const countdown: string[] = [];
 
@@ -30,7 +28,7 @@ function App() {
             }
 
             if (displayHours) {
-              countdown.push(`${hours} ${hours === 1 ? "hours" : "hours"}`);
+              countdown.push(`${hours} ${hours === 1 ? "hour" : "hours"}`);
             }
 
             if (displayMinutes) {
@@ -39,11 +37,9 @@ function App() {
               );
             }
 
-            if (displaySeconds) {
-              countdown.push(
-                `${seconds} ${seconds === 1 ? "second" : "seconds"}`
-              );
-            }
+            countdown.push(
+              `${seconds} ${seconds === 1 ? "second" : "seconds"}`
+            );
 
             return (
               <>
