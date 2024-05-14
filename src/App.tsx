@@ -11,7 +11,7 @@ function App() {
 
       <div className='card'>
         <Countdown
-          date={new Date(2024, 4, 23)}
+          date={new Date(2024, 4, 23, 3)}
           renderer={({ days, hours, minutes, seconds, completed }) => {
             if (completed) {
               return <h1>The game is live! Go play!</h1>;
